@@ -79,6 +79,7 @@
 			new_character.ghostize(1)						//we'll need to ghostize so that key isn't mobless.
 	else
 		key = new_character.key
+		ckey = new_character.ckey
 
 	if(new_character.mind)								//disassociate any mind currently in our new body's mind variable
 		new_character.mind.current = null
@@ -90,6 +91,7 @@
 
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
+		new_character.ckey = ckey
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"
